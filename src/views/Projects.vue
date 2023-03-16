@@ -17,26 +17,10 @@
 </template>
 
 <script>
-// import { assertExpressionStatement } from "@babel/types";
-// import { ref, onMounted } from "vue";
-
 import axios from "axios";
 
 export default {
   name: "Projects",
-  components: {},
-
-  // setup() {
-  //   let repos = ref([]);
-  //   onMounted(() => {
-  //     fetch("https://api.github.com/users/EmmanuelOdedele/repos")
-  //       .then((res) => res.json())
-  //       .then((data) => (repos = data))
-  //       .catch((err) => console.log(err.message));
-  //     console.log(repos);
-  //   });
-  //   return { repos };
-  // },
 
   data() {
     return {
@@ -45,37 +29,15 @@ export default {
   },
 
   created: function () {
-    axios.get("https://api.github.com/users/EmmanuelOdedele/repos").then((response) => {
+    axios
+      .get("https://api.github.com/users/EmmanuelOdedele/repos")
+      .then((response) => {
         this.repos = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
       });
-  }
-
-  // mounted() {
-  //   fetch("https://api.github.com/users/EmmanuelOdedele/repos")
-  //     .then((res) => res.json())
-  //     .then((data) => (this.repos = data))
-  //     .catch((err) => console.log(err.message));
-  //   // console.log(repos);
-  //   return repos = 'i'
-  // },
-
-  // data() {
-  //   return {
-  //     repos: [],
-  //   };
-  // },
-
-  // created() {
-  //   axios
-  //     .get("https://api.github.com/users/EmmanuelOdedele/repos")
-  //     .then((response) => {
-  //       this.repos = response.data;
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  //   console.log(repos);
-  // },
+  },
 };
 </script>
 
