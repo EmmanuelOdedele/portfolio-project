@@ -8,7 +8,7 @@
       </p>
       <p class="detail">
         Learning and working to make magic happen on the internet. View my
-        Projects, Resume, Contact Me, or send me an email at
+        <span id="projects" @click="projects">Projects</span>, <span id="resume" @click="resume">Resume</span>, <span id="contact" @click="contact">Contact Me</span>, or send me an email at
         emmaodedele@gmail.com.
         <!-- é -->
       </p>
@@ -22,6 +22,17 @@
 export default {
   name: "Home",
   components: {},
+  methods: {
+    projects(){
+      this.$router.push({name:'Projects'})
+    },
+    resume(){
+      this.$router.push({name:'Resume'})
+    },
+    contact(){
+      this.$router.push({name:'Contact'})
+    }
+  }
 };
 </script>
 
@@ -39,7 +50,7 @@ export default {
   width: 67%;
   /* background: thistle; */
   text-align: left;
-  padding: 60px 0;
+  padding: 50px 0;
 }
 #myname {
   font-size: 3em;
@@ -59,5 +70,14 @@ export default {
 
 .detail {
   margin: 10px 0 0 0;
+  line-height: 1.6;
+}
+
+#projects, #resume, #contact{
+  cursor: pointer;
+  background: #e7e7e7;
+  color: #192430;
+  padding: 2px 7px;
+  border-radius: 5px;
 }
 </style>
