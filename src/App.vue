@@ -50,7 +50,7 @@ export default {
 .page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   /* background: url(./assets/rm380-10.jpg);
   background-repeat: no-repeat;
   background-size: cover ; */
@@ -99,7 +99,9 @@ nav {
   padding: 0 120px;
   box-sizing: border-box;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
+  /* position: fixed; */
+  /* top: 0; */
 }
 
 .nav-content {

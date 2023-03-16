@@ -39,6 +39,7 @@ export default {
   width: 67%;
   /* background: thistle; */
   text-align: left;
+  padding: 60px 0;
 }
 #myname {
   font-size: 3em;
