@@ -4,7 +4,7 @@
       <h1 id="myname">I'm Emmanuel Odedele</h1>
       <p class="detail">
         Frontend developer (AltSchooler), Graphic designer, Illustrator,
-        Animation and Car enthisiast and lover of music
+        Animation and Car enthisiast and lover of music.
       </p>
       <p class="detail">
         Learning and working to make magic happen on the internet. View my
@@ -13,7 +13,7 @@
         <!-- é -->
       </p>
       <br />
-      <p class="detail">Check out my projects</p>
+      <p class="detail">You are welcome to my Portfolio.</p>
     </div>
   </div>
 </template>
@@ -77,7 +77,7 @@ export default {
   cursor: pointer;
   background: #e7e7e7;
   color: #192430;
-  padding: 2px 7px;
+  padding: 2px 10px;
   border-radius: 5px;
 }
 </style>

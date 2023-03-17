@@ -51,9 +51,10 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* background: url(./assets/rm380-10.jpg);
+  background: url(./assets/rm380-10.jpg);
   background-repeat: no-repeat;
-  background-size: cover ; */
+  background-size: cover ;
+  background-attachment: fixed;
 }
 
 
