@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Projects from "../views/Projects.vue";
 import Contact from "../views/Contact.vue";
 import Resume from "../views/Resume.vue";
+import RepoInfo from "../views/RepoInfo.vue"
 import NotFound from "@/views/NotFound.vue";
 
 const routes = [
@@ -25,6 +26,11 @@ const routes = [
     path: "/resume",
     name: "Resume",
     component: Resume,
+  },
+  {
+    path: "/projects/:id",
+    name: "RepoInfo",
+    component: RepoInfo,
   },
   {
     path: '/:catchAll(.*)',

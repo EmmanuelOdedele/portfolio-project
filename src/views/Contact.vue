@@ -2,10 +2,9 @@
     <div class="contact-container">
     <div class="contact-content">
       <h1 id="page-title">Contact Me.</h1>
-      <!-- <p class="detail">
-        Frontend developer (AltSchooler), Graphic designer, Illustrator,
-        Animation and Car enthisiast and lover of music
-      </p> -->
+      <p id="contact-detail" class="detail">
+      Message me here or send an email directly to <strong>emmaodedele@gmail.com</strong>. 
+      </p>
       <br/>
 
       <div class="form-container">
@@ -48,6 +47,10 @@ export default {
 
 .detail {
   margin: 10px 0 0 0;
+}
+
+#contact-detail {
+  margin-bottom: 15px;
 }
 
 /* .form-container{

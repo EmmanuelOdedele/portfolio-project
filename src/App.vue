@@ -16,11 +16,11 @@
     <footer>
       <div class="footer-content">
         <div class="footer-paragraphs">
-          <p>Twitter</p>
-          <p>Instagram</p>
-          <p>LinkedIn</p>
-          <p>Facebook</p>
-          <p>Github</p>
+          <a href="https://twitter.com/EmmaOdedele?t=EGg7S1DJso6iTZez5LWL_A&s=09" target="_blank" rel="noreferrer">Twitter</a>
+          <a href="https://instagram.com/emma_odedele?igshid=ZDdkNTZiNTM=" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/in/emmanuel-odedele-56b4001b1/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.facebook.com/Emmauel.Odedele" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="https://github.com/EmmanuelOdedele" target="_blank" rel="noreferrer">Github</a>
         </div>
       </div>
     </footer>
@@ -79,10 +79,12 @@ footer {
   justify-content: space-between;
 }
 
-footer p {
+footer a {
   display: inline;
   margin: 0;
   font-size: small;
+  text-decoration: none;
+  color: #2c3e50;
 }
 
 img {

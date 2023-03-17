@@ -8,8 +8,13 @@
       </p> -->
       <br />
 
-      <div class="repo-container" v-if="repos.length && !loading">
-        <p v-for="repo in repos" :key="repo.id">{{ repo.name }}</p>
+      <div class="repo-container" v-if="repos.length">
+        <p v-for="repo in repos" :key="repo.id">
+          <!-- {{ repo.name }} -->
+          <router-link :to="{ name: 'RepoInfo', params: { name: repo.name } }">
+            {{ repo.name }}
+          </router-link>
+        </p>
       </div>
       <div v-else>Loading repositories...</div>
 
@@ -29,7 +34,7 @@
     </div>
   </div>
 
-  <div class="loader" v-if="loading"></div>
+  <!-- <div class="loader" v-if="loading"></div> -->
 </template>
 
 <script>
@@ -70,6 +75,7 @@ export default {
               this.total = (lastPage - 1) * this.perPage + this.repos.length;
             }
           }
+          console.log(repos)
         })
         .catch((error) => {
           console.log(error);
@@ -160,14 +166,16 @@ export default {
 } */
 
 .repo-container p {
-  background: #2c3e50;
+  /* background: #2c3e50; */
   padding: 20px;
   margin: 0 0 15px 0;
   border-radius: 10px;
   max-width: 600px;
   cursor: pointer;
-  color: white;
+  color: #2c3e50;
 }
+
+
 
 /* .loader {
   position: relative;
