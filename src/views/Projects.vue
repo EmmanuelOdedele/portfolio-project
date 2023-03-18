@@ -166,9 +166,9 @@ export default {
 .repo-container p {
   background: #2c3e50;
   padding: 20px;
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
   border-radius: 10px;
-  max-width: 400px;
+  width: 450px;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -217,6 +217,7 @@ export default {
 
 .pagination button {
   margin-top: 0;
+  font-size: medium;
   border: 0;
   padding: 10px 20px;
   border-radius: 5px;

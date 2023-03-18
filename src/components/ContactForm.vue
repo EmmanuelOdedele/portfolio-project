@@ -24,7 +24,7 @@ form {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 420px;
+  width: 520px;
   background: #2c3e50;
   text-align: left;
   padding: 20px 40px 40px 40px;
@@ -32,37 +32,38 @@ form {
   /* display: flex; */
 }
 label {
-  color: #a1b1c0;
+  color: #e7e7e7;
   display: inline-block;
   margin: 30px 0 8px;
-  font-size: 0.6em;
-  text-transform: uppercase;
+  font-size: 1em;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 input {
   display: block;
-  padding: 6px 6px;
+  padding: 10px 10px;
   width: 100%;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #ddd;
   color: #2c3e50;
   border-radius: 5px;
+  font-family: Campton, Helvetica, Arial, sans-serif;
+  font-size: medium;
 }
 input:focus, textarea:focus{
   outline: none;
 }
 textarea {
+  font-size: medium;
   font-family: Campton, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: block;
-  padding: 6px 6px;
+  padding: 10px 10px;
   width: 100%;
   max-width: 100%;
   min-width: 100%;
-  min-height: 80px;
+  min-height: 100px;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #ddd;
@@ -74,12 +75,14 @@ textarea {
   cursor: pointer;
 }
 #contact-button {
+  font-size: medium;
   background-color: #e7e7e7;
   border: 0;
   padding: 10px 20px;
   margin-top: 30px;
   color: #2c3e50;
   border-radius: 5px;
+  font-family: Campton, Helvetica, Arial, sans-serif;
 }
 #contact-button:hover{
   background:#7d8791;

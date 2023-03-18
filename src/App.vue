@@ -51,10 +51,11 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: url(./assets/rm380-10.jpg);
-  background-repeat: no-repeat;
+  /* background: url(./assets/rm380-10.jpg); */
+  /* background-repeat: no-repeat;
   background-size: cover ;
   background-attachment: fixed;
+  background-image: linear-gradient(160deg, white, #f1f5f8) ; */
 }
 
 
@@ -98,7 +99,7 @@ img {
 
 nav {
   /* background: #42b983; */
-  height: 80px;
+  height: 100px;
   padding: 0 120px;
   box-sizing: border-box;
   display: flex;

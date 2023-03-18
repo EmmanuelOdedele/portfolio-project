@@ -52,8 +52,8 @@ background-color: #444;
 .resume-item {
   margin-top: 25px;
   background-color: aliceblue;
-  height: 500px;
-  width: 400px;
+  height: 620px;
+  width: 500px;
   border: 1px solid #2c3e50;
 }
 
