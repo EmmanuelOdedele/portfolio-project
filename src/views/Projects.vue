@@ -6,11 +6,8 @@
 
       <div class="repo-container" v-if="repos.length">
         <p v-for="repo in repos" :key="repo.id">
-          <router-link
-            id="repo-name"
-            :to="{ name: 'RepoInfo', params: { id: repo.id } }"
-          >
-            {{ repo.name }}
+          <router-link id="link" :to="{ name: 'RepoInfo', params: { id: repo.id } }">
+            <div id="repo-name">{{ repo.name }}</div>
           </router-link>
         </p>
       </div>
@@ -163,7 +160,7 @@ export default {
   background: blue;
 } */
 
-.repo-container p {
+/* .repo-container p {
   background: #2c3e50;
   padding: 20px;
   margin: 0 0 20px 0;
@@ -171,12 +168,25 @@ export default {
   width: 450px;
   cursor: pointer;
   transition: transform 0.2s;
-}
-.repo-container p:hover {
+} */
+/* .repo-container p:hover {
   transform: scale(1.03);
-}
+  background: #243444;
+} */
 #repo-name {
   color: white;
+  text-decoration: none;
+  background: #2c3e50;
+  padding: 20px;
+  margin: 0 0 10px 0;
+  border-radius: 10px;
+  width: 60%;
+  cursor: pointer;
+  /* transition: transform 0.2s; */
+}
+
+
+#link{
   text-decoration: none;
 }
 
@@ -226,7 +236,6 @@ export default {
 }
 .pagination button.active {
   background-color: #ffd16d;
-  
 }
 
 .pagination button:hover {
