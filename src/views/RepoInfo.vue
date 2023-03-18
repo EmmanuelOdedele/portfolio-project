@@ -13,11 +13,11 @@
       </div>
 
       <h1 id="page-title">Repository Info.</h1>
-      <div v-if="repo">
-        <p>{{ repo.name }}</p>
+      <div v-if="repo.length === 0">
+        <p>Loading repository info...</p>
       </div>
       <div v-else>
-        <p>Loading repository info...</p>
+        <p>{{repo.name}}</p>
       </div>
     </div>
   </div>
@@ -30,23 +30,27 @@ import axios from "axios";
 export default {
   name: "RepoInfo",
   components: { ContactForm },
-  props: ["name"],
   data() {
     return {
       repo: [],
     };
   },
 
+  
   created: function () {
     axios
-      .get("https://api.github.com/users/EmmanuelOdedele/repos/" + this.name)
+      .get("https://api.github.com/repos/EmmanuelOdedele/" + this.name)
       .then((response) => {
         this.repo = response.data;
-        console.log(this.repo);
       })
       .catch((error) => {
         console.log(error);
       });
+  },
+  computed: {
+    name() {
+      return this.$route.params.id;
+    },
   },
 };
 </script>

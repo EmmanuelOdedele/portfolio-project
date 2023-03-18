@@ -8,10 +8,9 @@
       </p> -->
       <br />
 
-      <div class="repo-container" v-if="repos.length">
+      <div class="repo-container" v-if="repos.length > 0">
         <p v-for="repo in repos" :key="repo.id">
-          <!-- {{ repo.name }} -->
-          <router-link :to="{ name: 'RepoInfo', params: { name: repo.name } }">
+          <router-link :to="{ path: '/projects/:id', name: 'RepoInfo', params: { id: repo.name } }">
             {{ repo.name }}
           </router-link>
         </p>
@@ -75,7 +74,6 @@ export default {
               this.total = (lastPage - 1) * this.perPage + this.repos.length;
             }
           }
-          console.log(repos)
         })
         .catch((error) => {
           console.log(error);
