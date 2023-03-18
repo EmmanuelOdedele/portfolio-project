@@ -133,7 +133,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .projects-container {
   /* background: grey; */
   display: flex;
@@ -225,6 +225,7 @@ export default {
 }
 .pagination button.active {
   background-color: #ffd16d;
+  
 }
 
 .pagination button:hover {

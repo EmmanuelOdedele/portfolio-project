@@ -74,17 +74,18 @@ textarea {
   cursor: pointer;
 }
 #contact-button {
-  background-color: #0b6dff;
+  background-color: #e7e7e7;
   border: 0;
   padding: 10px 20px;
   margin-top: 30px;
-  color: white;
+  color: #2c3e50;
   border-radius: 5px;
 }
 #contact-button:hover{
-  background-color:#ffd16d;
-  transition: 0.5s ease-in-out;
-  color: #2c3e50;
+  background:#7d8791;
+  /* color: #192430; */
+  color: #e7e7e7;
+  transition: 0.2s ease-in;
 }
 .submit {
   text-align: left;

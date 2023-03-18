@@ -2,9 +2,7 @@
   <div class="resume-container">
     <div class="resume-content">
       <h1 id="page-title">Resume.</h1>
-      <p class="detail">
-        Reach out to me via my contact page. View or download the resume
-      </p>
+      <p class="detail">View or download the resume</p>
       <br />
 
       <div class="resume">
@@ -51,7 +49,7 @@ export default {
 background-color: #444;
 } */
 
-.resume-item{
+.resume-item {
   margin-top: 25px;
   background-color: aliceblue;
   height: 500px;
@@ -59,9 +57,8 @@ background-color: #444;
   border: 1px solid #2c3e50;
 }
 
-.resume-item p{
+.resume-item p {
   margin: 5px 0 0 5px;
   font-size: small;
 }
-
 </style>
