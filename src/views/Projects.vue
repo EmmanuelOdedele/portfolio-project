@@ -2,16 +2,14 @@
   <div class="projects-container">
     <div class="projects-content">
       <h1 id="page-title">Projects.</h1>
-      <!-- <p class="detail">
-        Frontend developer (AltSchooler), Graphic designer, Illustrator,
-        Animation and Car enthisiast and lover of music
-      </p> -->
       <br />
 
       <div class="repo-container" v-if="repos.length">
         <p v-for="repo in repos" :key="repo.id">
-          <!-- {{ repo.name }} -->
-          <router-link :to="{ name: 'RepoInfo', params: { name: repo.name } }">
+          <router-link
+            id="repo-name"
+            :to="{ name: 'RepoInfo', params: { id: repo.id } }"
+          >
             {{ repo.name }}
           </router-link>
         </p>
@@ -75,7 +73,7 @@ export default {
               this.total = (lastPage - 1) * this.perPage + this.repos.length;
             }
           }
-          console.log(repos)
+          console.log(this.repos);
         })
         .catch((error) => {
           console.log(error);
@@ -166,16 +164,21 @@ export default {
 } */
 
 .repo-container p {
-  /* background: #2c3e50; */
+  background: #2c3e50;
   padding: 20px;
   margin: 0 0 15px 0;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 400px;
   cursor: pointer;
-  color: #2c3e50;
+  transition: transform 0.2s;
 }
-
-
+.repo-container p:hover {
+  transform: scale(1.03);
+}
+#repo-name {
+  color: white;
+  text-decoration: none;
+}
 
 /* .loader {
   position: relative;
@@ -214,13 +217,19 @@ export default {
 
 .pagination button {
   margin-top: 0;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #2c3e50;
+  font-family: Campton, Helvetica, Arial, sans-serif;
 }
 .pagination button.active {
   background-color: #ffd16d;
-  color: rgb(40, 40, 40);
 }
 
 .pagination button:hover {
   cursor: pointer;
+  background-color: #e7e7e7;
+  transition: 0.1s ease-in;
 }
 </style>

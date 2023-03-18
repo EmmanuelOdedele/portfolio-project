@@ -10,7 +10,7 @@
     <textarea></textarea>
 
     <div class="submit">
-      <button>Send Message</button>
+      <button id="contact-button">Send Message</button>
     </div>
   </form>
 </template>
@@ -73,7 +73,7 @@ textarea {
 .labelcursor {
   cursor: pointer;
 }
-button {
+#contact-button {
   background-color: #0b6dff;
   border: 0;
   padding: 10px 20px;
@@ -81,7 +81,7 @@ button {
   color: white;
   border-radius: 5px;
 }
-button:hover{
+#contact-button:hover{
   background-color:#ffd16d;
   transition: 0.5s ease-in-out;
   color: #2c3e50;

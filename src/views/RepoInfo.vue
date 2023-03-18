@@ -1,24 +1,16 @@
 <template>
   <div class="contact-container">
     <div class="contact-content">
-      <h1 id="page-title">Contact Me.</h1>
-      <!-- <p class="detail">
-        Frontend developer (AltSchooler), Graphic designer, Illustrator,
-        Animation and Car enthisiast and lover of music
-      </p> -->
-      <br />
-
-      <div class="form-container">
-        <ContactForm />
-      </div>
-
       <h1 id="page-title">Repository Info.</h1>
-      <div v-if="repo">
-        <p>{{ repo.name }}</p>
+      <div class="repo-container" v-if="repos.length">
+        <div v-for="repo in filteredRepos">
+          {{ repo.name }}
+          {{ repo.id }}
+          {{ repo.html_url }}
+          {{ repo.homepage }}
+        </div>
       </div>
-      <div v-else>
-        <p>Loading repository info...</p>
-      </div>
+      <div v-else>Loading repositories...</div>
     </div>
   </div>
 </template>
@@ -27,22 +19,29 @@
 import ContactForm from "@/components/ContactForm.vue";
 import axios from "axios";
 
+
 export default {
   name: "RepoInfo",
   components: { ContactForm },
-  props: ["name"],
+  props: ["id"],
   data() {
     return {
-      repo: [],
+      repos: [],
     };
+  },
+
+  computed: {
+    filteredRepos() {
+      return this.repos.filter((repo) => repo.id == this.$route.params.id);
+    },
   },
 
   created: function () {
     axios
-      .get("https://api.github.com/users/EmmanuelOdedele/repos/" + this.name)
+      .get("https://api.github.com/users/EmmanuelOdedele/repos")
       .then((response) => {
-        this.repo = response.data;
-        console.log(this.repo);
+        this.repos = response.data;
+        console.log(this.repos);
       })
       .catch((error) => {
         console.log(error);
