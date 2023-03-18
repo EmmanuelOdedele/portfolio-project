@@ -6,7 +6,7 @@
       <br />
 
       <div class="resume">
-        <div class="resume-item"><p>My Resume Picture</p></div>
+        <div class="resume-item"><p>Resume Picture</p></div>
       </div>
     </div>
   </div>
