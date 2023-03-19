@@ -29,7 +29,7 @@
             <div id="divider"></div>
             <p>
               <i>View on Github:</i> <br />
-              <a :href="repo.html_url">{{ repo.html_url }}</a>
+              <a :href="repo.html_url" target="_blank" rel="noreferrer">{{ repo.html_url }}</a>
             </p>
             <div id="divider"></div>
             <p>
